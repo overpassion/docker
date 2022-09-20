@@ -72,3 +72,19 @@ docker image ls
 docker image rm {image id}
 ```
 
+## Windows FTP command
+```
+$ ftp
+ftp> open 192.168.100.40
+
+ftp> ls
+500 Illegal PORT command.
+425 Use PORT or PASV first.
+
+
+ftp> quote pasv
+227 Entering Passive Mode (172,18,0,7,195,80)
+
+ftp> ls
+425 Failed to establish connection.
+```
