@@ -72,6 +72,16 @@ docker image ls
 docker image rm {image id}
 ```
 
+## Passive Mode
+설정 파일 vsftpd.conf에 다음을 반드시 추가해야 한다.
+설정이 없는 경우 다음 오류가 발생한다.
+ETIMEOUT, 425 failed to establish
+```
+port_promiscuous=YES
+#패시브모드로 연결될 ip(포트제외 서버ip만 적어주세요)
+pasv_address=192.168.XX.XX
+```
+
 ## Windows FTP command
 ```
 $ ftp
